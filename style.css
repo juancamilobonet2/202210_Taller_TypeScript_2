@@ -1,0 +1,63 @@
+.test{
+    border-style: ridge;
+    border-color: blueviolet;
+    border-width: 10px;
+}
+
+.centerTitle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centerImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#gradRedYellow {
+    background-image: linear-gradient(red, yellow);
+}
+
+#gradPurpleOrange {
+    background-image: linear-gradient(purple, rgb(255, 145, 0));
+}
+
+#gradRainbow {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+.external {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .internal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+  }
+
+.verticalCenter{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.serieName{
+    color:blue;
+}
