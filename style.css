@@ -50,7 +50,7 @@
   .internal {
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 1000px;
   }
 
 .verticalCenter{
@@ -60,4 +60,13 @@
 
 .serieName{
     color:blue;
+}
+
+.buffer{
+    height: 50px;
+}
+
+.tableBorder{
+    border-width: 100px;
+    border-color: black;
 }

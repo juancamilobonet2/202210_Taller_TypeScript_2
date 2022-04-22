@@ -7,7 +7,9 @@ let seriesTbody: HTMLElement = document.getElementById('series')!;
 //const btnfilterByName: HTMLElement = document.getElementById("button-filterByName")!;
 //const inputSearchBox: HTMLInputElement = <HTMLInputElement> document.getElementById("search-box")!;
 const avgSeasons: HTMLElement = document.getElementById("avg-seasons")!;
-
+const seriesImg: HTMLImageElement = document.getElementById("series-img") as HTMLImageElement;
+const seriesTitle: HTMLElement = document.getElementById("series-title") as HTMLElement;
+const seriesSynop: HTMLElement = document.getElementById("series-synop") as HTMLElement;
 
 //btnfilterByName.onclick = () => applyFilterByName();
 
@@ -24,6 +26,9 @@ function renderSeriesInTable(series: Serie[]): void {
                             <td class="serieName">${serie.name}</td>
                             <td>${serie.channel}</td>
                             <td>${serie.seasons}</td>`;
+    trElement.addEventListener("click", function(){
+                                          showSeries(serie);
+                                        });
     seriesTbody.appendChild(trElement);
   });
 }
@@ -42,6 +47,12 @@ function renderSeriesInTable(series: Serie[]): void {
     c.name.match(nameKey));
 } */
 
+function showSeries(series: Serie){
+  console.log("Mostrando serie con nombre: "+series.name)
+  seriesImg.src = series.img;
+  seriesTitle.innerHTML=`${series.name}`;
+  seriesSynop.innerHTML=`${series.synopsis}`;
+}
 
 function getAvgSeasons(series: Serie[]): number {
   let totalSeasons: number = 0;
